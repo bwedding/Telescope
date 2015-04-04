@@ -13,11 +13,13 @@ Meteor.startup(function () {
           'h3', 'h4', 'h5', 'h6', 'blockquote', 'p', 'a', 'ul',
           'ol', 'nl', 'li', 'b', 'i', 'strong', 'em', 'strike',
           'code', 'hr', 'br', 'div', 'table', 'thead', 'caption',
-          'tbody', 'tr', 'th', 'td', 'u', 'pre', 'img', 'font'
+          'tbody', 'tr', 'th', 'td', 'u', 'pre', 'img', 'font', 'span'
         ],
         allowedAttributes: {
           a: [ 'href', 'name', 'target' ],
-          font: ['size']
+          font: ['size', 'face'],
+          div: ['style'],
+          span: ['style']
         }
       });
       // console.log('// after sanitization:')
@@ -30,5 +32,12 @@ Meteor.startup(function () {
     if(!!doc.body)
       // doc.htmlBody = sanitize(marked(doc.body));
       doc.htmlBody = sanitize(doc.body);
+  });
+
+  Posts.before.update(function (userId, doc, fieldNames, modifier, options) {
+    // if body is being modified, update htmlBody too
+    if (Meteor.isServer && modifier.$set && modifier.$set.body) {
+      modifier.$set.htmlBody = sanitize(modifier.$set.body);
+    }
   });
 });
