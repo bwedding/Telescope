@@ -1,7 +1,7 @@
 AutoForm.addInputType("bootstrap-wysiwyg", {
   template: "afBootstrap-wysiwyg",
   valueOut: function () {
-    return this.html();
+    return this.cleanHtml();
   }
 });
 

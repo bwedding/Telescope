@@ -2,22 +2,7 @@
  * of the key things about the widget is that it allows you to do your own styling!
  */
 
-
-#bootstrap-wysiwyg {
-	max-height: 250px;
-	height: 250px;
-	background-color: white;
-	border-collapse: separate;
-  	border: 1px solid rgb(204, 204, 204);
- 	padding: 4px;
- 	box-sizing: content-box;
- 	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
- 	box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
-	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
-	overflow: scroll;
-	outline: none;
-
+.unreset() {
   // Unreset styles
   body {
     font: 9pt/1.5em sans-serif;
@@ -151,6 +136,28 @@
       clear: both;
       visibility: hidden;
   }
+}
+
+.post-body {
+  .unreset();
+}
+
+#bootstrap-wysiwyg {
+	max-height: 250px;
+	height: 250px;
+	background-color: white;
+	border-collapse: separate;
+  	border: 1px solid rgb(204, 204, 204);
+ 	padding: 4px;
+ 	box-sizing: content-box;
+ 	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
+ 	box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
+	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
+	overflow: scroll;
+	outline: none;
+
+  .unreset();
 }
 #bootstrap-wysiwyg:focus{
     border-color:rgba(82, 168, 236, 0.8);
