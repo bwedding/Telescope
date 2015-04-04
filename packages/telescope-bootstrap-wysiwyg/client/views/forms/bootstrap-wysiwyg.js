@@ -10,3 +10,9 @@ Template["afBootstrap-wysiwyg"].onRendered(function () {
   inst.$('#bootstrap-wysiwyg').wysiwyg();
   inst.$('#bootstrap-wysiwyg').html(inst.data.value);
 });
+
+Template["afBootstrap-wysiwyg"].events({
+  'click .dropdown-menu': function (e) {
+    e.stopPropagation();
+  }
+});
