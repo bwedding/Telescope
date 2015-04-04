@@ -26,7 +26,6 @@ Package.onUse(function(api) {
     'client/views/forms/bootstrap-wysiwyg.html',
     'client/views/forms/bootstrap-wysiwyg.js',
     'client/views/posts/post_form.html',
-    'client/views/posts/post_form.js',
     'client/views/posts/post_edit.html',
     'client/views/posts/post_submit.html',
   ], 'client');
