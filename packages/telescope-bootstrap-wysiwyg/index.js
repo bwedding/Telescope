@@ -19,8 +19,10 @@ Meteor.startup(function () {
           a: [ 'href', 'name', 'target' ],
           font: ['size', 'face'],
           div: ['style'],
-          span: ['style']
-        }
+          span: ['style'],
+          img: ['src']
+        },
+        allowedSchemes: [ 'http', 'https', 'ftp', 'mailto', 'data' ]
       });
       // console.log('// after sanitization:')
       // console.log(s)
