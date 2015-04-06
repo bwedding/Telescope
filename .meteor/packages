@@ -96,3 +96,5 @@ telescope-messages
 
 # Custom Packages
 telescope-bootstrap-wysiwyg
+telescope-custom
+telescope-static-pages
